@@ -65,6 +65,18 @@ var newArray = array.filter(n => n % 2 === 0).reduce((prev, next) => prev + next
 
 console.log('newArray', newArray)
 
+// 函数式写法
 // reduce(filter(array, n => n % 2 === 0), (prev, next) => prev + next, 0)
 
 // sort(filter(array, n => n % 2 === 1), (a, b) => a - b)
+
+// const curry = (fn, arity = fn.length, ...args) =>
+//   arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
+
+const curry = (fn, arity = fn.length, ...args) => {
+  if (arity <= args.length) {
+    return fn(...args)
+  } else {
+    return curry.bind(null, fn, arity, ...args)
+  }
+}
