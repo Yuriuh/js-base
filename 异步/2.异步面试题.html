@@ -1,0 +1,20 @@
+<div>
+  <img
+    id="img-baidu"
+    src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
+    alt="baidu"
+  >
+</div>
+
+<script>
+var imgBaidu = document.querySelector('#img-baidu')
+console.log('width not on loaded', imgBaidu.width)
+console.log('done1')
+
+imgBaidu.onload = function() {
+  console.log('width on loaded', this.width)
+  console.log('real done')
+}
+
+console.log('done2')
+</script>
