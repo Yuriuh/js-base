@@ -17,4 +17,83 @@ imgBaidu.onload = function() {
 }
 
 console.log('done2')
+
+
+</script>
+
+<div>
+  <ul>
+    <li>选项1</li>
+    <li>选项2</li>
+    <li>选项3</li>
+    <li>选项4</li>
+    <li>选项5</li>
+    <li>选项6</li>
+  </ul>
+</div>
+
+<script>
+var liList = document.querySelectorAll('li')
+
+// var i
+// for (i = 0; i < liList.length; i++) {
+//   var li = liList[i]
+//   li.onclick = function() {
+//     console.log('i', i)
+//   }
+// }
+
+// 闭包解决
+// for (var i = 0; i < liList.length; i++) {
+//   var li = liList[i]
+//   void function(i) {
+//     li.onclick = function() {
+//       console.log('i', i)
+//     }
+//   }(i)
+// }
+
+// let 解决
+for (let i = 0; i < liList.length; i++) {
+  let li = liList[i]
+  li.onclick = function() {
+    console.log('i', i)
+  }
+}
+</script>
+
+<div id="todo-container"></div>
+
+<script>
+var url = 'https://jsonplaceholder.typicode.com/todos'
+var todoContainer = document.querySelector('#todo-container')
+
+ajaxGet(url, e => {
+  var target = e.target
+  var responseText = target.responseText
+  var responseJSON = JSON.parse(responseText)
+  var slicedResponse = responseJSON.slice(0, 10)
+  var t = todosTempate(slicedResponse)
+  insertHTML(todoContainer, t)
+})
+
+function ajaxGet(url, cb) {
+  var xhr = new XMLHttpRequest()
+  xhr.open('GET', url)
+  xhr.addEventListener('load', cb)
+  xhr.send()
+}
+
+function todosTempate(todos) {
+  var todoList = todos.map(todo => todoTemplate(todo)).join('')
+  return `<ul>${todoList}</ul>`
+}
+
+function todoTemplate(todo) {
+  return `<li>title: ${todo.title}</li>`
+}
+
+function insertHTML(parentDom, template) {
+  parentDom.insertAdjacentHTML('beforeend', template)
+}
 </script>
