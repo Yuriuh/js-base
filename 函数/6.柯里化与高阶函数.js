@@ -73,10 +73,19 @@ console.log('newArray', newArray)
 // const curry = (fn, arity = fn.length, ...args) =>
 //   arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
 
-const curry = (fn, arity = fn.length, ...args) => {
+function curry(fn, arity = fn.length, ...args) {
   if (arity <= args.length) {
     return fn(...args)
   } else {
     return curry.bind(null, fn, arity, ...args)
   }
 }
+
+function add(a, b, c, d) {
+  return a + b + c + d
+}
+
+const curriedAdd = curry(add)
+
+console.log(curriedAdd(1, 2, 3, 4))
+console.log(curriedAdd(1)(2)(3)(4))
