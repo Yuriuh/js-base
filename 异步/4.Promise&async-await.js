@@ -25,7 +25,7 @@ function buyFruitAsync(time) {
 }
 
 void async function() {
-  var result = await buyFruitAsync(5)
+  var result = await buyFruitAsync(3)
   console.log('result', result)
 }()
 
