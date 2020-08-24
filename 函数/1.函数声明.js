@@ -12,3 +12,8 @@ function namedFn() {
 
 // 箭头函数
 var arrowFn = () => true
+
+// 异步函数
+async function asyncFn() {
+  return true
+}
