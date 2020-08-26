@@ -1,5 +1,5 @@
 // 匿名函数
-var anonymousFn = function() {
+var anonymousFn = function () {
   return true
 }
 
@@ -14,7 +14,7 @@ function namedFn() {
 var arrowFn = () => true
 
 // 异步匿名函数
-var asyncAnonymousFn = async function() {
+var asyncAnonymousFn = async function () {
   return true
 }
 
@@ -25,3 +25,14 @@ async function asyncFn() {
 
 // 异步箭头函数
 var asyncArrowFn = async () => true
+
+// 生成器函数
+function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
+  for (let i = start; i < end; i += step) {
+    yield i
+  }
+}
+
+var a = makeRangeIterator(1, 10, 2)
+
+a.next()
