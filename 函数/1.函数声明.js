@@ -32,7 +32,3 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
     yield i
   }
 }
-
-var a = makeRangeIterator(1, 10, 2)
-
-a.next()
