@@ -10,7 +10,6 @@
   - 2. 不能作为构造函数
 */
 
-
 // setTimeout(function() {
 //   console.log('this', this)
 // }.bind({name: 'Yuriuh'}), 1000)
@@ -33,9 +32,42 @@
 //   }.bind(this), 1000)
 // }.bind({name: 'Yuriuh'}), 1000)
 
-setTimeout(function() {
+setTimeout(function () {
   console.log('this', this)
   setTimeout(() => {
     console.log('inner this', this)
   }, 1000)
-}.bind({name: 'Yuriuh'}), 1000)
+}.bind({ name: 'Yuriuh' }), 1000)
+
+var name = 'outter'
+
+var obj1 = {
+  fn() {
+    const arrowFn = () => {
+      console.log('this', this)
+    }
+    arrowFn()
+  }
+}
+
+var obj2 = {
+  fn() {
+    function normalFn() {
+      console.log('this', this)
+    }
+    normalFn()
+  }
+}
+
+var obj3 = {
+  innerObj: {
+    name: 'inner',
+    arrowFn: () => {
+      console.log('this name', this.name)
+    }
+  }
+}
+
+obj1.fn()
+obj2.fn()
+obj3.innerObj.arrowFn()
