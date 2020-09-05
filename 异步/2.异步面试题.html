@@ -72,7 +72,7 @@ ajaxGet(url, e => {
   var target = e.target
   var responseText = target.responseText
   var responseJSON = JSON.parse(responseText)
-  var slicedResponse = responseJSON.slice(0, 10)
+  var slicedResponse = responseJSON.slice(0, 15)
   var t = todosTempate(slicedResponse)
   insertHTML(todoContainer, t)
 })
