@@ -19,3 +19,6 @@ var view = {
     this.element.addClass('active')
   }
 }
+
+var max = Math.max.apply(null, numbers)
+var min = Math.min.apply(null, numbers)
