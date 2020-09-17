@@ -24,10 +24,10 @@ function buyFruitAsync(time) {
   })
 }
 
-void async function() {
+void (async function () {
   var result = await buyFruitAsync(3)
   console.log('result', result)
-}()
+})()
 
 // 自己实现 promise
 
@@ -60,10 +60,28 @@ function Promise(fn) {
       successArray.push(successFn)
       failArray.push(failFn)
       return undefined // 简化
-    }
+    },
   }
 }
 
-// 写 Promise 的 人
+async function fetchTodo(i) {
+  const url = `https://jsonplaceholder.typicode.com/todos/${i}`
+  const res = await fetch(url)
+  const json = res.json()
+  return json
+}
 
-// 调用 Promise 的人
+async function render() {
+  let result = []
+  for (let i = 1; i < 10; i++) {
+    const p = fetchTodo(i)
+    result.push(p)
+  }
+  console.log('result', result)
+  for (let i = 0; i < result.length; i++) {
+    const res = await result[i]
+    console.log('res', res)
+  }
+}
+
+render()
