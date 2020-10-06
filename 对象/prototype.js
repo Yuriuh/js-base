@@ -23,3 +23,9 @@ console.log('map', map)
 var mapProto = map.__proto__
 
 console.log('map proto', mapProto)
+
+var set = new Set()
+
+var setProto = set.__proto__
+
+console.log('set proto', setProto)
