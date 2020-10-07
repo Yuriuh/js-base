@@ -29,3 +29,9 @@ var set = new Set()
 var setProto = set.__proto__
 
 console.log('set proto', setProto)
+
+var reg = new RegExp()
+
+var regProto = reg.__proto__
+
+console.log('reg proto')
