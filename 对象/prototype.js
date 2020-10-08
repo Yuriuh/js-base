@@ -34,4 +34,10 @@ var reg = new RegExp()
 
 var regProto = reg.__proto__
 
-console.log('reg proto')
+console.log('reg proto', regProto)
+
+var num = 1
+
+var numProto = num.__proto__
+
+console.log('num proto', numProto)
