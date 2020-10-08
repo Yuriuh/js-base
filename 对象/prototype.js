@@ -41,3 +41,9 @@ var num = 1
 var numProto = num.__proto__
 
 console.log('num proto', numProto)
+
+var str = ''
+
+var strProto = str.__proto__
+
+console.log('str proto', strProto)
