@@ -47,3 +47,9 @@ var str = ''
 var strProto = str.__proto__
 
 console.log('str proto', strProto)
+
+var bool = false
+
+var boolProto = bool.__proto__
+
+console.log('bool proto', boolProto)
