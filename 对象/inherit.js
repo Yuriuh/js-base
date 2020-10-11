@@ -23,3 +23,5 @@ var 马利什 = new 狮子('马利什')
 
 console.log('马利什 爬树', 马利什.爬树)
 console.log('马利什 叫', 马利什.叫)
+
+console.log('马利什', 马利什)
