@@ -25,3 +25,20 @@ console.log('马利什 爬树', 马利什.爬树)
 console.log('马利什 叫', 马利什.叫)
 
 console.log('马利什', 马利什)
+
+// Es6 继承
+class 猫 {
+  爬树() {}
+  叫() {}
+}
+
+class 狮 extends 猫 {
+  constructor(name) {
+    super()
+    this.name = name
+  }
+}
+
+var 奇克 = new 狮('奇克')
+
+console.log(奇克)
