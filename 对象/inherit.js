@@ -1,8 +1,7 @@
 function 猫科() {}
 
-猫科.prototype.爬树 = function() {}
-猫科.prototype.叫 = function() {}
-
+猫科.prototype.爬树 = function () {}
+猫科.prototype.叫 = function () {}
 
 function 狮子(name) {
   this.name = name
@@ -13,7 +12,7 @@ function 狮子(name) {
 继承(狮子, 猫科)
 
 function 继承(继承者, 被继承者) {
-  var F = function() {}
+  var F = function () {}
   F.prototype = 被继承者.prototype
   继承者.prototype = new F()
   继承者.prototype.constructor = 继承者
@@ -42,3 +41,4 @@ class 狮 extends 猫 {
 var 奇克 = new 狮('奇克')
 
 console.log(奇克)
+console.log('奇克 吃', 奇克.叫)
