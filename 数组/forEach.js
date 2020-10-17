@@ -1,8 +1,3 @@
-// var arr = [1, 2, 3, 4, 5]
-// arr.forEach((item, index, array) => {
-//   console.log('item', item)
-// })
-
 Array.prototype.myForEach = function (fn) {
   fn = fn || (() => {})
   for (let i = 0; i < this.length; i++) {
