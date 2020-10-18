@@ -48,4 +48,6 @@ class User {
 Object.assign(User.prototype, sayHiMixin)
 
 // 现在 User 可以打招呼了
-new User('Dude').sayHi() // Hello Dude!
+var u = new User('Dude')
+
+u.sayHi() // Hello Dude!
