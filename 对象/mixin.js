@@ -51,3 +51,4 @@ Object.assign(User.prototype, sayHiMixin)
 var u = new User('Dude')
 
 u.sayHi() // Hello Dude!
+u.sayBye() // Hello Dude!
