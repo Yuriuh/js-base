@@ -53,3 +53,12 @@ var lion = {
 var lion2 = deepClone(lion)
 
 console.log('lion2', lion2)
+
+function simpleClone(target) {
+  return JSON.parse(JSON.stringify(target))
+}
+
+var obj = {
+  name: 'Yuriuh',
+  friends: [1, 2, 3],
+}
