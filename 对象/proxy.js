@@ -1,12 +1,18 @@
-const object1 = {}
+let user = {
+  name: 'John',
+  surname: 'Smith',
+}
 
-Object.defineProperty(object1, 'property1', {
-  value: 42,
-  writable: false,
+Object.defineProperty(user, 'fullName', {
+  get() {
+    return `${this.name} ${this.surname}`
+  },
+
+  set(value) {
+    ;[this.name, this.surname] = value.split(' ')
+  },
 })
 
-object1.property1 = 77
-// throws an error in strict mode
+console.log(user.fullName) // John Smith
 
-console.log(object1.property1)
-// expected output: 42
+for (let key in user) console.log(key) // name, surname
