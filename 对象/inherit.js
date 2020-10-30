@@ -92,22 +92,22 @@ console.log('奇克 吃', 奇克.叫)
 
 // es6 代码
 
-// class 猫科 {
-//   constructor(options) {
-//     this.颜色 = options.颜色
-//   }
-//   叫() {}
-//   爬树() {}
-// }
+class 猫科 {
+  constructor(options) {
+    this.颜色 = options.颜色
+  }
+  叫() {}
+  爬树() {}
+}
 
-// class 狮子 extends 猫科 {
-//   constructor(options) {
-//     super(options)
-//     this.名字 = options.名字
-//   }
-// }
+class 狮子 extends 猫科 {
+  constructor(options) {
+    super(options)
+    this.名字 = options.名字
+  }
+}
 
-// var 马利什 = new 狮子({
-//   名字: '马利什',
-//   颜色: '棕色',
-// })
+var 马利什 = new 狮子({
+  名字: '马利什',
+  颜色: '棕色',
+})
