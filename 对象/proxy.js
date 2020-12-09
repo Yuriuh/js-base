@@ -3,34 +3,12 @@ let user = {
   surname: 'Smith',
 }
 
-Object.defineProperty(user, 'fullName', {
-  get() {
-    return `${this.name} ${this.surname}`
-  },
+let target = {}
+let proxy = new Proxy(target, {}) // 空的 handler 对象
 
-  set(value) {
-    ;[this.name, this.surname] = value.split(' ')
-  },
-})
+proxy.test = 5 // 写入 proxy 对象 (1)
+console.log(target.test) // 5，test 属性出现在了 target 中！
 
-console.log(user.fullName) // John Smith
+console.log(proxy.test) // 5，我们也可以从 proxy 对象读取它 (2)
 
-for (let key in user) console.log(key) // name, surname
-
-function User(name, birthday) {
-  this.name = name
-  this.birthday = birthday
-
-  // 年龄是根据当前日期和生日计算得出的
-  Object.defineProperty(this, 'age', {
-    get() {
-      let todayYear = new Date().getFullYear()
-      return todayYear - this.birthday.getFullYear()
-    },
-  })
-}
-
-let john = new User('John', new Date(1992, 6, 1))
-
-alert(john.birthday) // birthday 是可访问的
-alert(john.age) // ……age 也是可访问的
+for (let key in proxy) console.log(key) // test，迭代也正常工作 (3)
