@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      #brick {
+        width: 40px;
+        height: 20px;
+        background: #ee6b47;
+        position: relative;
+        cursor: pointer;
+      }
+
+      #path {
+        outline: 1px solid #e8c48e;
+        width: 540px;
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="path">
+      <div id="brick"></div>
+    </div>
+
+    <script>
+      function animate(options) {
+        var start = performance.now()
+
+        requestAnimationFrame(function animate(time) {
+          // timeFraction от 0 до 1
+          var timeFraction = (time - start) / options.duration
+          if (timeFraction > 1) timeFraction = 1
+
+          // текущее состояние анимации
+          var progress = options.timing(timeFraction)
+
+          options.draw(progress)
+
+          if (timeFraction < 1) {
+            requestAnimationFrame(animate)
+          }
+        })
+      }
+
+      brick.onclick = function () {
+        animate({
+          duration: 1000,
+          timing: function (timeFraction) {
+            return Math.pow(timeFraction, 2)
+          },
+          draw: function (progress) {
+            brick.style.left = progress * 500 + 'px'
+          },
+        })
+      }
+    </script>
+  </body>
+</html>
