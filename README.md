@@ -7,4 +7,3 @@
 - 把 JavaScript 的基础知识用自己的话用博客等形式，描述一遍
 - 深入理解 JavaScript 动画
 - 重点关注 canvas 相关的可视化知识
-- 看完现代化 JavaScript 教程
