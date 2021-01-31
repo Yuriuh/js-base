@@ -9,3 +9,15 @@ var str = 'I love JavaScript!'
 var regexp = /love/
 
 console.log('search string', str.search(regexp))
+
+// 修饰符
+
+// i ignore 不区分大小写
+
+// g global 匹配所有
+
+// m multiline 多行模式
+
+// u 完整 unicode 支持
+
+// y 粘滞模式
