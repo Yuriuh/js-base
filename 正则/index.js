@@ -14,6 +14,11 @@ console.log('search string', str.search(regexp))
 
 // i ignore 不区分大小写
 
+var str = 'I love JavaScript!'
+
+console.log(str.search(/LOVE/)) // -1（没找到）
+console.log(str.search(/LOVE/i)) // 2
+
 // g global 匹配所有
 
 // m multiline 多行模式
