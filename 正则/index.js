@@ -26,3 +26,12 @@ console.log(str.search(/LOVE/i)) // 2
 // u 完整 unicode 支持
 
 // y 粘滞模式
+
+var str = '+7(903)-123-45-67'
+
+var regexp = /\d/g
+
+console.log(str.match(regexp)) // array of matches: 7,9,0,3,1,2,3,4,5,6,7
+
+// let's make the digits-only phone number of them:
+console.log(str.match(regexp).join('')) // 79035419441
