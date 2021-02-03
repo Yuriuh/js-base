@@ -41,3 +41,13 @@ console.log(str.match(regexp)) // array of matches: 7,9,0,3,1,2,3,4,5,6,7
 
 // let's make the digits-only phone number of them:
 console.log(str.match(regexp).join('')) // 79035419441
+
+// 反向类
+
+// \D 非数字
+// \S 非空格符号
+// \W 非单字字符
+
+var str = '+7(903)-123-45-67'
+
+console.log(str.replace(/\D/g, '')) // 79031234567
