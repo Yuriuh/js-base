@@ -27,6 +27,12 @@ console.log(str.search(/LOVE/i)) // 2
 
 // y 粘滞模式
 
+// 字符类
+
+// \d digit 0 到 9 的字符
+// \s space 空格 制表符\t 换行符\n \v \f \r
+// \w word 拉丁字母 数字 下划线_
+
 var str = '+7(903)-123-45-67'
 
 var regexp = /\d/g
