@@ -51,3 +51,9 @@ console.log(str.match(regexp).join('')) // 79035419441
 var str = '+7(903)-123-45-67'
 
 console.log(str.replace(/\D/g, '')) // 79031234567
+
+// 16进制数字
+
+var regexp = /x\p{Hex_Digit}\p{Hex_Digit}/u
+
+console.log('number: xAF'.match(regexp)) // xAF
