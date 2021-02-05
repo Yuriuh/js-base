@@ -57,3 +57,12 @@ console.log(str.replace(/\D/g, '')) // 79031234567
 var regexp = /x\p{Hex_Digit}\p{Hex_Digit}/u
 
 console.log('number: xAF'.match(regexp)) // xAF
+
+// 锚点：字符串开始^与结尾$
+
+// 测试 12:34 格式的时间
+var goodInput = '13:34'
+var badInput = '123:456'
+var regexp = /^\d\d:\d\d$/
+console.log(regexp.test(goodInput)) // true
+console.log(regexp.test(badInput)) // false
