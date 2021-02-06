@@ -66,3 +66,11 @@ var badInput = '123:456'
 var regexp = /^\d\d:\d\d$/
 console.log(regexp.test(goodInput)) // true
 console.log(regexp.test(badInput)) // false
+
+// Flag "m" — 多行模式
+
+var str = `1st place: Winnie
+2nd place: Piglet
+33rd place: Eeyore`
+
+console.log(str.match(/^\d+/gm)) // 1, 2, 33
