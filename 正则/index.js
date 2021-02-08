@@ -77,5 +77,6 @@ console.log(str.match(/^\d+/gm)) // 1, 2, 33
 
 // 词边界 \b
 
+var a = 1
 console.log('Hello, Java!'.match(/\bJava\b/)) // Java
 console.log('Hello, JavaScript!'.match(/\bJava\b/)) // null
