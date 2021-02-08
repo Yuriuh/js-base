@@ -74,3 +74,8 @@ var str = `1st place: Winnie
 33rd place: Eeyore`
 
 console.log(str.match(/^\d+/gm)) // 1, 2, 33
+
+// 词边界 \b
+
+console.log('Hello, Java!'.match(/\bJava\b/)) // Java
+console.log('Hello, JavaScript!'.match(/\bJava\b/)) // null
