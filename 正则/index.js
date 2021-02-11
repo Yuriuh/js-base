@@ -79,3 +79,12 @@ console.log(str.match(/^\d+/gm)) // 1, 2, 33
 
 var regexp = /\bJava\b/
 console.log('Hello, Java!'.match(regexp)) // Java
+
+// 转义、特殊字符
+
+// 特殊字符列表:
+// [ \ ^ $ . | ? * + ( )
+
+console.log('Chapter 5.1'.match(/\d\.\d/)) // 5.1
+console.log('function g()'.match(/g\(\)/)) // "g()"
+console.log('1\\2'.match(/\\/)) // '\'
