@@ -88,3 +88,27 @@ console.log('Hello, Java!'.match(regexp)) // Java
 console.log('Chapter 5.1'.match(/\d\.\d/)) // 5.1
 console.log('function g()'.match(/g\(\)/)) // "g()"
 console.log('1\\2'.match(/\\/)) // '\'
+
+// 量词 `+,*,?` 和 `{n}`
+
+console.log("I'm 12345 years old".match(/\d{5}/)) //  "12345"
+console.log("I'm not 12, but 1234 years old".match(/\d{3,5}/)) // "1234"
+console.log("I'm not 12, but 345678 years old".match(/\d{3,}/)) // "345678"
+
+var str = '+7(903)-123-45-67'
+
+var numbers = str.match(/\d{1,}/g)
+
+console.log(numbers) // 7,903,123,45,67
+
+// 缩写
+
+var str = '+7(903)-123-45-67'
+
+console.log(str.match(/\d+/g)) // 7,903,123,45,67
+
+var str = 'Should I write color or colour?'
+
+console.log(str.match(/colou?r/g)) // color, colour
+
+console.log('100 10 1'.match(/\d0*/g)) // 100, 10, 1
