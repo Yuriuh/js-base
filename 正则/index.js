@@ -112,3 +112,11 @@ var str = 'Should I write color or colour?'
 console.log(str.match(/colou?r/g)) // color, colour
 
 console.log('100 10 1'.match(/\d0*/g)) // 100, 10, 1
+
+// 贪婪搜索
+
+var reg = /".+"/g
+
+var str = 'a "witch" and her "broom" is one'
+
+console.log(str.match(reg)) // "witch" and her "broom"
