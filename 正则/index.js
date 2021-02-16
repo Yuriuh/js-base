@@ -120,3 +120,11 @@ var reg = /".+"/g
 var str = 'a "witch" and her "broom" is one'
 
 console.log(str.match(reg)) // "witch" and her "broom"
+
+// 懒惰模式
+
+var reg = /".+?"/g
+
+var str = 'a "witch" and her "broom" is one'
+
+console.log(str.match(reg)) // witch, broom
