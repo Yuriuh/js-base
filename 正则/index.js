@@ -128,3 +128,11 @@ var reg = /".+?"/g
 var str = 'a "witch" and her "broom" is one'
 
 console.log(str.match(reg)) // witch, broom
+
+// 替换方法
+
+var reg = /"[^"]+"/g
+
+var str = 'a "witch" and her "broom" is one'
+
+console.log(str.match(reg)) // witch, broom
