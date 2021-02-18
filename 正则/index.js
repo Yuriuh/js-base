@@ -136,3 +136,7 @@ var reg = /"[^"]+"/g
 var str = 'a "witch" and her "broom" is one'
 
 console.log(str.match(reg)) // witch, broom
+
+// 捕获组
+
+console.log('Gogogo now!'.match(/(go)+/i)) // "Gogogo"
