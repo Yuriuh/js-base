@@ -140,3 +140,9 @@ console.log(str.match(reg)) // witch, broom
 // 捕获组
 
 console.log('Gogogo now!'.match(/(go)+/i)) // "Gogogo"
+
+// 例子：域名
+
+var regexp = /(\w+\.)+\w+/g
+
+console.log('site.com my.site.com'.match(regexp)) // site.com,my.site.com
