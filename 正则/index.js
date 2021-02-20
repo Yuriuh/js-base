@@ -146,3 +146,9 @@ console.log('Gogogo now!'.match(/(go)+/i)) // "Gogogo"
 var regexp = /(\w+\.)+\w+/g
 
 console.log('site.com my.site.com'.match(regexp)) // site.com,my.site.com
+
+// 例子：邮箱
+
+var regexp = /[-.\w]+@([\w-]+\.)+[\w-]+/g
+
+console.log('my@mail.com @ his@site.com.uk'.match(regexp)) // my@mail.com, his@site.com.uk
