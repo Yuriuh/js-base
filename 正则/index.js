@@ -152,3 +152,13 @@ console.log('site.com my.site.com'.match(regexp)) // site.com,my.site.com
 var regexp = /[-.\w]+@([\w-]+\.)+[\w-]+/g
 
 console.log('my@mail.com @ his@site.com.uk'.match(regexp)) // my@mail.com, his@site.com.uk
+
+// 例子： 匹配括号中的内容
+
+var str = '<h1>Hello, world!</h1>'
+
+var tag = str.match(/<(.*?)>/)
+
+console.log(tag)
+console.log(tag[0]) // <h1>
+console.log(tag[1]) // h1
