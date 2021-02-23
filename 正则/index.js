@@ -162,3 +162,15 @@ var tag = str.match(/<(.*?)>/)
 console.log(tag)
 console.log(tag[0]) // <h1>
 console.log(tag[1]) // h1
+
+// 嵌套组
+
+var str = '<span class="my">'
+
+var regexp = /<(([a-z]+)\s*([^>]*))>/
+
+var result = str.match(regexp)
+console.log(result[0]) // <span class="my">
+console.log(result[1]) // span class="my"
+console.log(result[2]) // span
+console.log(result[3]) // class="my"
