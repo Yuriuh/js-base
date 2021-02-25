@@ -181,3 +181,11 @@ console.log(match.length) // 3
 console.log(match[0]) // ac（完全匹配）
 console.log(match[1]) // undefined，因为 (z)? 没匹配项
 console.log(match[2]) // c
+
+// /g 不会返回组的内容
+
+var str = '<h1> <h2>'
+
+var tags = str.match(/<(.*?)>/g)
+
+console.log(tags) // <h1>,<h2>
