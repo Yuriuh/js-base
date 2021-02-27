@@ -203,3 +203,14 @@ results = Array.from(results) // let's turn it into array
 
 console.log(results[0]) // <h1>,h1 (1st tag)
 console.log(results[1]) // <h2>,h2 (2nd tag)
+
+// matchAll 返回的格式
+
+var results = '<h1> <h2>'.matchAll(/<(.*?)>/gi)
+
+var [tag1, tag2] = results
+
+console.log(tag1[0]) // <h1>
+console.log(tag1[1]) // h1
+console.log(tag1.index) // 0
+console.log(tag1.input) // <h1> <h2>
