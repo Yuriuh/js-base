@@ -214,3 +214,19 @@ console.log(tag1[0]) // <h1>
 console.log(tag1[1]) // h1
 console.log(tag1.index) // 0
 console.log(tag1.input) // <h1> <h2>
+
+// 命名组
+
+var dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g
+
+var str = '2019-10-30 2020-01-01'
+
+var results = str.matchAll(dateRegexp)
+
+for (var result of results) {
+  var { year, month, day } = result.groups
+
+  console.log(`${day}.${month}.${year}`)
+  // 第一个 alert：30.10.2019
+  // 第二个：01.01.2020
+}
