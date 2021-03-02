@@ -226,7 +226,7 @@ var results = str.matchAll(dateRegexp)
 for (var result of results) {
   var { year, month, day } = result.groups
 
-  console.log(`${day}.${month}.${year}`)
-  // 第一个 alert：30.10.2019
-  // 第二个：01.01.2020
+  console.log(`${day}`)
+  console.log(`${month}`)
+  console.log(`${year}`)
 }
