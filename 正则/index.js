@@ -230,3 +230,10 @@ for (var result of results) {
   console.log(`${month}`)
   console.log(`${year}`)
 }
+
+// 替换捕获组
+
+var str = 'John Bull'
+var regexp = /(\w+) (\w+)/
+
+console.log(str.replace(regexp, '$2, $1')) // Bull, John
