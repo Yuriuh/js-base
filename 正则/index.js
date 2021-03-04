@@ -237,3 +237,16 @@ var str = 'John Bull'
 var regexp = /(\w+) (\w+)/
 
 console.log(str.replace(regexp, '$2, $1')) // Bull, John
+
+// 非捕获组 ?:
+
+var str = 'Gogogo John!'
+
+// ?: 从捕获组中排除 'go'
+var regexp = /(?:go)+ (\w+)/i
+
+var result = str.match(regexp)
+
+console.log(result[0]) // Gogogo John（完全匹配）
+console.log(result[1]) // John
+console.log(result.length) // 2（数组中没有更多项）
