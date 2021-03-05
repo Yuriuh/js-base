@@ -250,3 +250,11 @@ var result = str.match(regexp)
 console.log(result[0]) // Gogogo John（完全匹配）
 console.log(result[1]) // John
 console.log(result.length) // 2（数组中没有更多项）
+
+// 反模式
+
+var str = `He said: "She's the one!".`
+
+var regexp = /(['"])(.*?)\1/g
+
+console.log(str.match(regexp)) // "She's the one!"
