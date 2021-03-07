@@ -258,3 +258,11 @@ var str = `He said: "She's the one!".`
 var regexp = /(['"])(.*?)\1/g
 
 console.log(str.match(regexp)) // "She's the one!"
+
+// 选择（OR）|
+
+var reg = /html|php|css|java(script)?/gi
+
+var str = 'First HTML appeared, then CSS, then JavaScript'
+
+console.log(str.match(reg)) // 'HTML', 'CSS', 'JavaScript'
