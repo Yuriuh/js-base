@@ -266,3 +266,9 @@ var reg = /html|php|css|java(script)?/gi
 var str = 'First HTML appeared, then CSS, then JavaScript'
 
 console.log(str.match(reg)) // 'HTML', 'CSS', 'JavaScript'
+
+// 时间正则表达式
+
+var reg = /[01]\d|2[0-3]:[0-5]\d/g
+
+console.log('12'.match(reg)) // 12 (matched [01]\d)
