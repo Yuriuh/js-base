@@ -278,3 +278,9 @@ console.log('12'.match(reg)) // 12 (matched [01]\d)
 var str = '1 turkey costs 30€'
 
 console.log(str.match(/\d+(?=€)/)) // 30 （正确地跳过了单个的数字 1）
+
+// 前端否定断言
+
+var str = '2 turkeys cost 60€'
+
+console.log(str.match(/\d+(?!€)/)) // 2（正确地跳过了价格）
