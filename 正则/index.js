@@ -296,3 +296,15 @@ console.log(str.match(/(?<=\$)\d+/)) // 30 （跳过了单个的数字 1）
 var str = '2 turkeys cost $60'
 
 console.log(str.match(/(?<!\$)\d+/)) // 2 (跳过了价格)
+
+// 前瞻断言合后端断言的捕获组
+
+var str = '1 turkey costs 30€'
+var reg = /\d+(?=(€|kr))/ // €|kr 两边有额外的括号
+
+console.log(str.match(reg)) // 30, €
+
+var str = '1 turkey costs $30'
+var reg = /(?<=(\$|£))\d+/
+
+console.log(str.match(reg)) // 30, $
