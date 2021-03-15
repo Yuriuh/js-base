@@ -308,3 +308,12 @@ var str = '1 turkey costs $30'
 var reg = /(?<=(\$|£))\d+/
 
 console.log(str.match(reg)) // 30, $
+
+var regexp = /^((?=(\w+))\2\s?)*$/
+
+console.log(regexp.test('A good string')) // true
+
+var str =
+  'An input string that takes a long time or even makes this regex to hang!'
+
+console.log(regexp.test(str)) // false，执行得很快！
