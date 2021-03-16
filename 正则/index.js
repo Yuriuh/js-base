@@ -309,6 +309,8 @@ var reg = /(?<=(\$|£))\d+/
 
 console.log(str.match(reg)) // 30, $
 
+// 防止回溯
+
 var regexp = /^((?=(\w+))\2\s?)*$/
 
 console.log(regexp.test('A good string')) // true
@@ -317,3 +319,13 @@ var str =
   'An input string that takes a long time or even makes this regex to hang!'
 
 console.log(regexp.test(str)) // false，执行得很快！
+
+// 括号被命名为 ?<word>，使用 \k<word> 来引用
+var regexp = /^((?=(?<word>\w+))\k<word>\s?)*$/
+
+var str =
+  'An input string that takes a long time or even makes this regex to hang!'
+
+console.log(regexp.test(str)) // false
+
+console.log(regexp.test('A correct string')) // true
