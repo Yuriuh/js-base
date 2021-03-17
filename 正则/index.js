@@ -329,3 +329,13 @@ var str =
 console.log(regexp.test(str)) // false
 
 console.log(regexp.test('A correct string')) // true
+
+var str = 'let varName = "value"'
+
+var regexp = /\w+/y
+
+regexp.lastIndex = 3
+console.log(regexp.exec(str)) // null（位置 3 有一个空格，不是单词）
+
+regexp.lastIndex = 4
+console.log(regexp.exec(str)) // varName（在位置 4 的单词）
