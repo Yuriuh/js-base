@@ -339,3 +339,17 @@ console.log(regexp.exec(str)) // null（位置 3 有一个空格，不是单词�
 
 regexp.lastIndex = 4
 console.log(regexp.exec(str)) // varName（在位置 4 的单词）
+
+// str.match(regexp)
+
+var str = 'I love JavaScript'
+
+var result = str.match(/Java(Script)/)
+
+console.log(result[0]) // JavaScript（完全匹配）
+console.log(result[1]) // Script（第一个分组）
+console.log(result.length) // 2
+
+// 其他信息：
+console.log(result.index) // 7（匹配位置）
+console.log(result.input) // I love JavaScript（源字符串）
