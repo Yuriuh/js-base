@@ -361,3 +361,9 @@ var result = str.match(/Java(Script)/g)
 
 console.log(result[0]) // JavaScript
 console.log(result.length) // 1
+
+// str.search(regexp)
+
+var str = 'A drop of ink may make a million think'
+
+console.log(str.search(/ink/i)) // 10（第一个匹配位置）
