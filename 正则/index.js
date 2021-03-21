@@ -367,3 +367,9 @@ console.log(result.length) // 1
 var str = 'A drop of ink may make a million think'
 
 console.log(str.search(/ink/i)) // 10（第一个匹配位置）
+
+// str.replace(str|regexp, str|func)
+
+// 用冒号替换连字符
+
+console.log('12-34-56'.replace('-', ':')) // 12:34-56
