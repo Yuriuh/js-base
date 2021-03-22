@@ -373,3 +373,8 @@ console.log(str.search(/ink/i)) // 10（第一个匹配位置）
 // 用冒号替换连字符
 
 console.log('12-34-56'.replace('-', ':')) // 12:34-56
+
+var str = 'John Smith'
+
+// 交换名字和姓氏
+console.log(str.replace(/(john) (smith)/i, '$2, $1')) // Smith, John
