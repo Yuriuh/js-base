@@ -378,3 +378,11 @@ var str = 'John Smith'
 
 // 交换名字和姓氏
 console.log(str.replace(/(john) (smith)/i, '$2, $1')) // Smith, John
+
+// 将所有匹配项都大写
+
+var str = 'html and css'
+
+var result = str.replace(/html|css/gi, str => str.toUpperCase())
+
+console.log(result) // HTML and CSS
