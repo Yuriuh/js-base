@@ -386,3 +386,15 @@ var str = 'html and css'
 var result = str.replace(/html|css/gi, str => str.toUpperCase())
 
 console.log(result) // HTML and CSS
+
+// regexp.exec(str)
+var str = 'More about JavaScript at https://javascript.info'
+var regexp = /javascript/gi
+
+var result
+
+while ((result = regexp.exec(str))) {
+  console.log(`Found ${result[0]} at position ${result.index}`)
+  // Found JavaScript at position 11，然后
+  // Found javascript at position 33
+}
