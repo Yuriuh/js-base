@@ -414,3 +414,11 @@ var regexp = /\w+/y
 regexp.lastIndex = 5 // 在位置 5 精确查找
 
 console.log(regexp.exec(str)) // null
+
+// regexp.test(str)
+
+var str = 'I love JavaScript'
+
+// 这两个测试相同
+console.log(/love/i.test(str)) // true
+console.log(str.search(/love/i) != -1) // true
