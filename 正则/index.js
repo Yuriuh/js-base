@@ -407,3 +407,10 @@ var regexp = /\w+/g // 带有标记 "g"，lastIndex 属性被忽略
 regexp.lastIndex = 5 // 从第 5 个位置搜索（从逗号开始）
 
 console.log(regexp.exec(str)) // world
+
+var str = 'Hello, world!'
+
+var regexp = /\w+/y
+regexp.lastIndex = 5 // 在位置 5 精确查找
+
+console.log(regexp.exec(str)) // null
