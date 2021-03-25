@@ -398,3 +398,12 @@ while ((result = regexp.exec(str))) {
   // Found JavaScript at position 11，然后
   // Found javascript at position 33
 }
+
+// 我们可以通过手动设置 lastIndex，用 regexp.exec 从给定位置进行搜索。
+
+var str = 'Hello, world!'
+
+var regexp = /\w+/g // 带有标记 "g"，lastIndex 属性被忽略
+regexp.lastIndex = 5 // 从第 5 个位置搜索（从逗号开始）
+
+console.log(regexp.exec(str)) // world
