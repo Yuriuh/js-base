@@ -422,3 +422,9 @@ var str = 'I love JavaScript'
 // 这两个测试相同
 console.log(/love/i.test(str)) // true
 console.log(str.search(/love/i) != -1) // true
+
+// 一个反例
+var str = 'Bla-bla-bla'
+
+console.log(/love/i.test(str)) // false
+console.log(str.search(/love/i) != -1) // false
