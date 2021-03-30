@@ -428,3 +428,12 @@ var str = 'Bla-bla-bla'
 
 console.log(/love/i.test(str)) // false
 console.log(str.search(/love/i) != -1) // false
+
+// 从给定位置进行搜索
+var regexp = /love/gi
+
+var str = 'I love JavaScript'
+
+// 从位置 10 开始：
+regexp.lastIndex = 10
+console.log(regexp.test(str)) // false（无匹配）
