@@ -437,3 +437,9 @@ var str = 'I love JavaScript'
 // 从位置 10 开始：
 regexp.lastIndex = 10
 console.log(regexp.test(str)) // false（无匹配）
+
+// 相同的全局正则表达式在不同的源字符串上测试可能会失败
+var regexp = /javascript/g // （新建 regexp：regexp.lastIndex=0)
+
+console.log(regexp.test('javascript')) // true（现在 regexp.lastIndex=10）
+console.log(regexp.test('javascript')) // false
