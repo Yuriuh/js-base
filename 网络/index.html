@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch</title>
+  </head>
+  <body>
+    <script>
+      async function fn() {
+        const url = 'https://jsonplaceholder.typicode.com/todos/1'
+        const response = await fetch(url)
+
+        if (response.ok) {
+          // 如果 HTTP 状态码为 200-299
+          // 获取 response body（此方法会在下面解释）
+          const json = await response.json()
+        } else {
+          console.log('HTTP-Error: ' + response.status)
+        }
+      }
+
+      fn()
+    </script>
+  </body>
+</html>
