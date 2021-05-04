@@ -3,3 +3,4 @@
 - AJAX
 - Fetch
 - Axios
+- JSONP
